@@ -8,7 +8,7 @@ class HttpClientMock {
   get = jasmine.createSpy();
 }
 
-fdescribe('GroupService', () => {
+describe('GroupService', () => {
   let service: GroupService;
   let httpClientMock: HttpClientMock;
 
