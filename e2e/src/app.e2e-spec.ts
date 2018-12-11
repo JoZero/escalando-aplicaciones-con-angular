@@ -11,4 +11,19 @@ describe('workspace-project App', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('App');
   });
+
+  it('should have the right titles', () => {
+    const titles = [
+      'What is Lorem Ipsum?',
+      'What is Lorem Ipsum?'
+    ];
+
+    page.navigateTo();
+
+    const elements = page.getDashBoardTitles();
+
+    titles.forEach((title, index ) => {
+      expect(elements.get(index).getText()).toEqual(title);
+    });
+  });
 });
