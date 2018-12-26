@@ -43,13 +43,55 @@
   response:
     - status: 500
       latency: 500
+<<<<<<< HEAD
+=======
+      headers: 
+        content-type: application/json
+    - status: 500
+      latency: 1000
+>>>>>>> 5ba5b19c2fc214f98972e56b2a87d03987a362e5
       headers:
         content-type: application/json
     - status: 200
       latency: 3000
+<<<<<<< HEAD
       headers:
         content-type: application/json
       file: ./user.json
+=======
+      headers: 
+        content-type: application/json
+      file: ./user.json
+
+- request:
+    url: ^/admin/v1/users$
+    method: POST
+    post: >
+      {"fullName":"(.+)","email":"(.+)","password":"(.+)","group":"(.+)"}
+
+  response:
+    - status: 201
+      latency: 500
+      headers: 
+        content-type: application/json
+      body: >
+        {
+          "fullName": "<% post[1] %>",
+          "email": "<% post[2] %>",
+          "password": "<% post[3] %>",
+          "group": "<% post[4] %>"
+        }
+
+- request:
+    url: ^/admin/v1/users$
+    method: GET
+  response:
+    - status: 200
+      latency: 500
+      headers: 
+        content-type: application/json
+      file: ./users.json
+>>>>>>> 5ba5b19c2fc214f98972e56b2a87d03987a362e5
 
 - request:
     url: ^/auth-service/v1/groups$
@@ -60,3 +102,4 @@
     headers:
       content-type: application/json
     file: ./groups.json
+

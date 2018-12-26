@@ -11,12 +11,26 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     resolve: {
+<<<<<<< HEAD
       groups: ResolverService,
+=======
+      groups: ResolverService
+>>>>>>> 5ba5b19c2fc214f98972e56b2a87d03987a362e5
     }
   },
   {
     path: 'register',
     loadChildren: './pages/register/register.module#RegisterModule',
+<<<<<<< HEAD
+=======
+  },
+  {
+    path: 'admin',
+    loadChildren: './pages/admin/admin.module#AdminModule',
+    resolve: {
+      groups: ResolverService
+    }
+>>>>>>> 5ba5b19c2fc214f98972e56b2a87d03987a362e5
   },
   {
     path: '',

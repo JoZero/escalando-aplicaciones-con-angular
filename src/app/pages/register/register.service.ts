@@ -9,7 +9,9 @@ import { retry } from 'rxjs/operators';
 })
 export class RegisterService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   register(user): Observable<void> {
     return this.http

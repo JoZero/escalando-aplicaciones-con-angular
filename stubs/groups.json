@@ -1,7 +1,17 @@
 {
     "list": [
+<<<<<<< HEAD
         { "id": "B", "value": "Grupo B", "active": true },
         { "id": "C", "value": "Grupo C", "active": true },
         { "id": "A", "value": "Grupo A", "active": true }
    ]
+=======
+        { "id": "A", "value": "Grupo A", "active": true },
+        { "id": "B", "value": "Grupo B", "active": true },
+        { "id": "D", "value": "Grupo D", "active": true },
+        { "id": "F", "value": "Grupo F", "active": true },
+        { "id": "E", "value": "Grupo E", "active": true },
+        { "id": "C", "value": "Grupo C", "active": false }
+    ]
+>>>>>>> 5ba5b19c2fc214f98972e56b2a87d03987a362e5
 }
